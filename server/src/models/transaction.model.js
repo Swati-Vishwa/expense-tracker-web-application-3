@@ -6,13 +6,10 @@ const transactionSchema = new Schema({
     ref: "User",
     required: true
   },
-  transactionType: {
+  type: {
     type: String,
-    required: [true, "Transaction type is required"],
-    enum: {
-      value: ["Income", "Expense"],
-      message: "Transaction type must be Income or Expense"
-    }
+    required: [true, "Type is required"],
+    enum: { values: ["income", "expense"], message: "Type must be income or expense" },
   },
   amount: {
     type: Number,

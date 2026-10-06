@@ -7,10 +7,12 @@ app.use(cors())
 app.use(express.json())
 
 //importing routes
-import authRouter from "./routes/auth.route.js"
+import authRouter from "./routes/auth.route.js";
+import transactionRouter from "./routes/transaction.route.js";
 
 app.get("/", (req, res) => res.json({ message: "Expense Tracker API running" }));
 app.use("/api/auth", authRouter)
+app.use("/api/transactions", transactionRouter)
 
 app.get('/', (req, res) => {
   res.send('Hello Karma testing')
