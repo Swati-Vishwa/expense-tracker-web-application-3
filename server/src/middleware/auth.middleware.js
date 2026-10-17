@@ -9,7 +9,6 @@ import APIerror from "../utils/API-Error.js"
 export const protect = async (req, res, next) => {
   //get bearer token
   const header = req.headers.authorization;
-  console.log(header)
   if (!header?.startsWith("Bearer ")) {
     throw new APIerror(401, "Unauthorized")
   }
@@ -30,6 +29,5 @@ export const protect = async (req, res, next) => {
   if (!user) throw new APIerror(401, "User no longer exists");
   //attach user to req
   req.user = user;
-  console.log(req.user)
   next();
 }

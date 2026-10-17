@@ -32,7 +32,7 @@ const buildFilter = (userId, query) => {
   if (endDate) {
     const d = new Date(endDate);
     if (Number.isNaN(d.getTime())) throw new APIError(400, "Invalid end date");
-    d.setUTCHours(23, 59, 59, 999); // include the whole end day
+    d.setUTCHours(23, 59, 59, 999); 
     range.$lte = d;
   }
   if (startDate || endDate) filter.date = range;

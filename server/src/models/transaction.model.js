@@ -2,7 +2,7 @@ import mongoose, { Schema, Types } from "mongoose"
 
 const transactionSchema = new Schema({
   user: {
-    type: mongoose.Schema.ObjectId,
+    type: mongoose.Schema.Types.ObjectId,
     ref: "User",
     required: true
   },
@@ -26,7 +26,7 @@ const transactionSchema = new Schema({
     trim: true,
     default: ""
   },
-  Date: {
+  date: {
     type: Date,
     default: Date.now
   }
