@@ -67,7 +67,7 @@ npm install
 Copy `.env.example` to `.env` and fill in your own values:
 ```
 PORT=3000
-MONGO_URI=your_mongodb_connection_string_here
+MONGODB_URI=your_mongodb_connection_string_here
 JWT_SECRET=your_jwt_secret_here
 JWT_EXPIRES_IN=7d
 ```
@@ -133,3 +133,7 @@ All transaction routes require an `Authorization: Bearer <token>` header.
 
 © 2026 Swati Vishwakarma. All rights reserved.
 This repository is public for review and portfolio purposes.
+
+## Support
+
+For issues, questions, or contributions, please open an issue in the repository or contact the project maintainer.
